@@ -1,0 +1,94 @@
+@import "./variables/variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: $main-font;
+  background-color: $main-background;
+  color: $text-color;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: $card-background;
+  max-width: 1440px;
+  border-radius: 10px;
+}
+
+.content {
+  padding: 3rem;
+
+  h1 {
+    font-size: 40px;
+    max-width: 500px;
+    margin-bottom: 20px;
+
+    span {
+      color: $accent-color;
+    }
+  }
+
+  h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: $stat-headings-color;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 16px;
+    max-width: 400px;
+    color: $main-paragraph-color;
+    margin-bottom: 50px;
+  }
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+
+.main-image {
+
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.main-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $accent-color;
+  border-radius: 0 10px 10px 0;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+}
